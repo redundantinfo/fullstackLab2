@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <main>
+    <div id="form-container">
+      <form id="search-form">
+        <label for="name">Find album by name:</label>
+        <input type="text" id="name" name="name">
+        <button type="submit">Search</button>
+        <div id="search-result-container"></div>
+      </form>
+      <h1>Add Album</h1>
+      <form id="add-album-form">
+        <div>
+          <label for="title">Title:</label>
+          <input type="text" id="title" name="title">
+        </div>
+        <div>
+          <label for="artist">Artist:</label>
+          <input type="text" id="artist" name="artist">
+        </div>
+        <div>
+          <label for="year">Year:</label>
+          <input type="number" id="year" name="year">
+        </div>
+        <button type="submit">Add Album</button>
+      </form>
+    </div>
+    <div id="albums-container">
+      <h1>Albums</h1>
+      <div id="album-list"></div>
+    </div>
+  </main>
+  <script type="text/javascript" src="client.js"></script>
+</body>
+</html>
