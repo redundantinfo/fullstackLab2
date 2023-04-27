@@ -2,7 +2,7 @@ const addAlbumForm = document.querySelector('#add-album-form');
 
 const fetchStartPage = async () => {
   try {
-    const response = await fetch('/', {
+    const response = await fetch('https://fullstacklab2.onrender.com/', {
       method: 'GET',
       headers: { 'Content-Type': 'application/json' }
     });
@@ -17,7 +17,7 @@ const fetchStartPage = async () => {
 // get all albums - works
 async function fetchAllAlbums() {
   try {
-    const response = await fetch('http://localhost:3000/api/albums', {
+    const response = await fetch('https://fullstacklab2.onrender.com/api/albums', {
       method: 'GET',
       headers: { 'Content-Type': 'application/json' }
     });
@@ -36,7 +36,7 @@ async function fetchAllAlbums() {
 // get album by title - works
 async function fetchAlbum(title) {
   try {
-    const response = await fetch(`http://localhost:3000/api/albums/${title}`, {
+    const response = await fetch(`https://fullstacklab2.onrender.com/api/albums/${title}`, {
       method: 'GET',
       headers: { 'Content-Type': 'application/json' }
     });
@@ -55,7 +55,7 @@ async function fetchAlbum(title) {
 // add new album - works
 async function addAlbum(album) {
   try {
-    const response = await fetch('http://localhost:3000/api/albums', {
+    const response = await fetch('https://fullstacklab2.onrender.com/api/albums', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(album)
@@ -75,7 +75,7 @@ async function addAlbum(album) {
 // edit an album - works
 async function updateAlbum(id, updatedAlbum) {
   try {
-    const response = await fetch(`http://localhost:3000/api/albums/${id}`, {
+    const response = await fetch(`https://fullstacklab2.onrender.com/api/albums/${id}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(updatedAlbum)
@@ -97,7 +97,7 @@ async function deleteAlbum(id) {
   const confirmDelete = window.confirm('Are you sure you want to delete this album?');
   if (!confirmDelete) return;
   try {
-    const response = await fetch(`http://localhost:3000/api/albums/${id}`, {
+    const response = await fetch(`https://fullstacklab2.onrender.com/api/albums/${id}`, {
       method: 'DELETE',
       headers: { 'Content-Type': 'application/json' },
     });
